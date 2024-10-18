@@ -1,11 +1,9 @@
-import { useState } from "react";
-
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <h1>Todo Application</h1>
     </>
   );
 }

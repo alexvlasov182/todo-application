@@ -44,3 +44,55 @@ button:hover {
   background-color: #087ea4;
   opacity: 1;
 }
+
+.buttonCSV {
+  padding: 10px 20px;
+  background-color: cadetblue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttonCSV:hover {
+  background-color: #286c6e;
+  opacity: 1;
+}
+
+.deleteButton {
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.deleteButton:hover {
+  background-color: #bb331b;
+  opacity: 1;
+}
+
+.todoList {
+  list-style: none;
+}
+
+.todoItem {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.todoText {
+  color: #333;
+}
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}

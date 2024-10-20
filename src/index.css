@@ -2,3 +2,11 @@ body {
   font-family: "Raleway", sans-serif;
   font-style: normal;
 }
+
+ul {
+  padding: 0;
+}
+
+p {
+  text-align: center;
+}

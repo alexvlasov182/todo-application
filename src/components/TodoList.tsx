@@ -1,4 +1,4 @@
-import React, { useMemo, useContext, useCallback } from "react";
+import React, { useMemo, useContext } from "react";
 import { TodoContext } from "./TodoContext";
 import styles from "./../App.module.css";
 

@@ -1,4 +1,4 @@
-import React, { useMemo, useContext } from "react";
+import React, { useMemo, useContext, useCallback } from "react";
 import { TodoContext } from "./TodoContext";
 import styles from "./../App.module.css";
 
@@ -12,10 +12,10 @@ const TodoList: React.FC = () => {
   const { todos, toggleTodo, deleteTodo } = context;
 
   const downloadCSV = () => {
-    const dataCSV = todos
+    const dataCSV = "task,completed\n" + todos
       .map(
         (todo) =>
-          `task: ${todo.text}; completed: ${
+          `${todo.text},${
             todo.completed ? "done" : "not completed"
           }`
       )

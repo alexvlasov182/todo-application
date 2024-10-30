@@ -1,17 +1,17 @@
 import styles from "./App.module.css";
-import { TodoProvider } from "./components/TodoContext";
+
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import TodoFilter from "./components/TodoFilter";
 
 function App() {
   return (
-    <TodoProvider>
-      <div className={styles.container}>
-        <h1 className={styles.title}>Todo Application</h1>
-        <TodoForm />
-        <TodoList />
-      </div>
-    </TodoProvider>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Todo Application</h1>
+      <TodoFilter />
+      <TodoForm />
+      <TodoList />
+    </div>
   );
 }
 

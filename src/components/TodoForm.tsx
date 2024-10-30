@@ -15,7 +15,7 @@ const TodoForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (task.trim() !== "") {
-      addTodo({ text: task, completed: false });
+      addTodo(task);
       setTask("");
     }
   };

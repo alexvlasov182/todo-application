@@ -1,4 +1,4 @@
-import React, { useMemo, useContext, useCallback } from "react";
+import React, { useMemo, useContext } from "react";
 import { TodoContext } from "./TodoContext";
 import styles from "./../App.module.css";
 
@@ -9,44 +9,23 @@ const TodoList: React.FC = () => {
     throw new Error("TodoList must be used within TodoProvider");
   }
 
-  const { todos, toggleTodo, deleteTodo } = context;
-
-  const downloadCSV = () => {
-    const dataCSV = "task,completed\n" + todos
-      .map(
-        (todo) =>
-          `${todo.text},${
-            todo.completed ? "done" : "not completed"
-          }`
-      )
-      .join("\n");
-
-    const blob = new Blob([dataCSV], { type: "text/csv" });
-    const url = window.URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "todo-list.csv";
-    a.click();
-
-    window.URL.revokeObjectURL(url);
-  };
+  const { todos, toggleTodo, deleteTodo, downloadCSV } = context;
 
   const renderTodos = useMemo(() => {
-    return todos.map((todo, index) => (
-      <li key={index} className={styles.todoItem}>
+    return todos.map((todo) => (
+      <li key={todo.id} className={styles.todoItem}>
         <input
           type="checkbox"
           className={styles.checkbox}
           checked={todo.completed}
-          onChange={() => toggleTodo(index)}
+          onChange={() => toggleTodo(todo.id)}
         />
         <span className={todo.completed ? styles.completed : styles.todoText}>
           {todo.text}
         </span>
         <button
           className={styles.deleteButton}
-          onClick={() => deleteTodo(index)}
+          onClick={() => deleteTodo(todo.id)}
         >
           Delete
         </button>

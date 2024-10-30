@@ -101,3 +101,15 @@ button:hover {
 .checkbox {
   cursor: pointer;
 }
+
+.filterButtons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}

@@ -51,6 +51,10 @@ export const TodoProvider = ({ children }: TodoProviderProps) => {
   }, [todos]);
 
   useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  })
+
+  useEffect(() => {
     localStorage.setItem("filter", filter);
   }, [filter]);
 

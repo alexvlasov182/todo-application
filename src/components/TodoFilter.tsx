@@ -29,7 +29,7 @@ const TodoFilter: React.FC = () => {
         className={`${styles.button} ${
           activeFilter === "completed" ? styles.active : ""
         }`}
-        onClick={() => handleFilterClick("completed")}
+        onClick={() => handleFilterClick("completed")} 
       >
         Completed
       </button>

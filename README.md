@@ -32,7 +32,7 @@ This repository contains a Todo application built using React and TypeScript, bu
 1. Clone this repository:
 
 ```
-git clone https://github.com/username/todo-app.git
+git clone https://github.com/alexvlasov182/todo-app.git
 cd todo-app
 ```
 
